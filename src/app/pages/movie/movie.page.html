@@ -1,0 +1,18 @@
+<ion-card
+  button
+  routerLink="/movies-detail/{{movie.id}}"
+  class="ion-text-center"
+>
+  <ion-card-header>
+    <ion-toolbar color="primary">
+      <ion-card-title>{{movie.title}}</ion-card-title>
+      <ion-note color="medium"> {{movie.release_date| date : 'yyyy'}}</ion-note>
+    </ion-toolbar>
+    <ion-card-subtitle color="dark">Genres: {{genres}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-img [src]="getImageUrl()"></ion-img>
+    <ion-text> {{movie.overview}}</ion-text>
+    <!-- ?                      Aqui todos los datos que desean mostrar       -->
+  </ion-card-content>
+</ion-card>

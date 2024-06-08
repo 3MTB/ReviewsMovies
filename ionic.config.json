@@ -1,0 +1,13 @@
+{
+  "name": "ReviewsMovies",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://api.themoviedb.org/3"
+    }
+  ]
+}

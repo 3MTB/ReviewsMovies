@@ -1,0 +1,13 @@
+.background-intro{
+    background: linear-gradient(45deg, #1340B0, #4794E3);
+    width: 100%;
+    min-height: 100vh;
+}
+
+img{
+    padding-top: 30vh;
+    width: 100%;
+    max-width: 500px;
+}
+
+.jello-diagonal{animation:jello-diagonal .9s linear both} @keyframes jello-diagonal{0%{transform:skew(0deg 0deg)}30%{transform:skew(25deg 25deg)}40%{transform:skew(-15deg,-15deg)}50%{transform:skew(15deg,15deg)}65%{transform:skew(-5deg,-5deg)}75%{transform:skew(5deg,5deg)}100%{transform:skew(0deg 0deg)}}

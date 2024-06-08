@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Review Movie</ion-title>
+    Registro: {{movies.length}} Current Page: {{currentPage}}
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-searchbar
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="search"
+      (ngModelChange)="SearchByName()"
+    ></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-list class="container">
+    @for (mov of movies; track $index) {
+    <app-movie [movie]="mov" [genres]="getGenres(mov)"></app-movie>
+    }
+    <ion-infinite-scroll (ionInfinite)="getMoreData($event)">
+      <ion-infinite-scroll-content
+        loadingText="Loading More..."
+        loadingSpinner="bubbles"
+      >
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-list>
+</ion-content>
